@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HomelandSecurity</name>
+    </assembly>
+    <members>
+        <member name="T:HomelandSecurity.FlaggedPassenger">
+            <summary>
+            Class FlaggedPassenger inherits from Passenger
+            </summary>
+        </member>
+        <member name="T:HomelandSecurity.Passenger">
+            <summary>
+            The Passenger class represents one passenger. The passenger has a first name, last name, loyalty number
+            and a security flag, which denotes whether the passenger has been flagged by TSA.
+            </summary>
+        </member>
+        <member name="M:HomelandSecurity.Passenger.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a Passenger object with a given first name, last name, and loyalty number
+            </summary>
+            <param name="firstName">Passenger's First Name</param>
+            <param name="lastName">Passenger's Last Name</param>
+            <param name="loyaltyNumber">Passenger's Loyalty Number</param>
+        </member>
+        <member name="M:HomelandSecurity.Passenger.#ctor">
+            <summary>
+            Creates a Passenger object.
+            </summary>
+        </member>
+        <member name="P:HomelandSecurity.Passenger.FirstName">
+            <summary>
+             First Name of Passenger
+            </summary>
+        </member>
+        <member name="P:HomelandSecurity.Passenger.LastName">
+            <summary>
+             Last name of passenger
+            </summary>
+        </member>
+        <member name="P:HomelandSecurity.Passenger.LoyaltyNumber">
+            <summary>
+             Loyalty Code of Passenger
+            </summary>
+        </member>
+        <member name="P:HomelandSecurity.Passenger.SecurityFlag">
+            <summary>
+            SecurityFlag will contain a true or false value depending on whether a passenger is flagged or not.
+            </summary>
+        </member>
+        <member name="M:HomelandSecurity.FlaggedPassenger.#ctor">
+            <summary>
+            Creates a FlaggedPassenger. 
+            </summary>
+        </member>
+        <member name="M:HomelandSecurity.FlaggedPassenger.#ctor(System.String,System.String,System.String)">
+            <summary>
+             Creates a FlaggedPassenger with a given name and loyalty number
+            </summary>
+            <param name="firstName">Passenger's First Name</param>
+            <param name="lastName">Passenger's Last Name</param>
+            <param name="loyaltyNumber">Passenger's Loyalty Number</param>
+        </member>
+        <member name="P:HomelandSecurity.FlaggedPassenger.ReferenceNumber">
+            <summary>
+            TSA reference code for the security check.
+            </summary>
+        </member>
+        <member name="T:HomelandSecurity.TSA">
+            <summary>
+             The TSA class is the interface with the Transportion Security Administration.
+             Through its method, it accepts an array of Passenger objects and return a list
+             of flagged passengers in the form of an array of FlaggedPassenger objects.
+            </summary>
+        </member>
+        <member name="M:HomelandSecurity.TSA.RunSecurityCheck(HomelandSecurity.Passenger[],System.Int32)">
+            <summary>
+            Accepts a array of Passenger objects and runs a security check on them. This method 
+            returns an array of FlaggedPassengers. 
+            </summary>
+            <param name="passengers">Array of Passenger obects</param>
+            <param name="count">Count of how many passengers are in represented in the array</param>
+            <returns>Array of Flagged Passengers. Each passenger in this array is flagged</returns>
+        </member>
+    </members>
+</doc>
